@@ -10,7 +10,7 @@ export const SearchBar = () => {
     } else {
       setQuery(input.trim());
     }
-  }, 1000);
+  }, 700);
 
   return (
     <div>
