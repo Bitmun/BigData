@@ -7,6 +7,6 @@ export const useFetchComics = () => {
   return useFetch<Comic[]>(fetchComics);
 };
 
-export const useFetchComicsById = (id: number) => {
+export const useFetchComicById = (id: number | string) => {
   return useFetch<Comic[]>(() => fetchComicById(id), [id]);
 };

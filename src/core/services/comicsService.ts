@@ -7,6 +7,6 @@ export const fetchComics = async () => {
   });
 };
 
-export const fetchComicById = async (id: number) => {
+export const fetchComicById = async (id: number | string) => {
   return await axiosInstance(`/comics/${id}`);
 };
