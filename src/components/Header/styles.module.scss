@@ -1,3 +1,22 @@
-.activeNavLink {
-  color: orange;
+header {
+  display: flex;
+  padding: 1rem;
+  font-size: 2rem;
+  border-bottom: 1px solid var(--subTextSecondary-color);
+  background-color: #000;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .activeNavLink {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
 }
