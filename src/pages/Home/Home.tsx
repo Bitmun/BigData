@@ -1,3 +1,9 @@
+import { ComicsList } from 'components';
+
 export const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <ComicsList />
+    </div>
+  );
 };

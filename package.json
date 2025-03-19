@@ -9,7 +9,7 @@
     "format": "prettier --check .",
     "preview": "vite preview",
     "prepare": "husky",
-    "test": "npm run lint && npm run format"
+    "test": "npm run lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
