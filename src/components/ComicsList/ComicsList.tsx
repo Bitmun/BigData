@@ -26,19 +26,11 @@ export const ComicsList = () => {
   }, [response]);
 
   if (isLoading && offSet === 0) {
-    return (
-      <div>
-        <Loader />
-      </div>
-    );
+    return <Loader />;
   }
 
   if (error || !response) {
-    return (
-      <div>
-        <FetchError />
-      </div>
-    );
+    return <FetchError />;
   }
 
   return (

@@ -1,6 +1,7 @@
 export { CharacterDetailsCard } from './CharacterDetailsCard/CharacterDetailsCard';
 export { CharactersList } from './CharactersList/CharactersList';
 export { CharacterTile } from './CharacterTile/CharacterTile';
+export { ComicDetailsCard } from './ComicDetailsCard/ComicDetailsCard';
 export { ComicsList } from './ComicsList/ComicsList';
 export { ComicTile } from './ComicTile/ComicTile';
 export { CustomImg } from './CustomImg/CustomImg';

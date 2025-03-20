@@ -1,9 +1,8 @@
-import { FetchError, Loader } from '@components';
+import styles from './styles.module.scss';
 
-import { ComicDetailsCard } from 'components/ComicDetailsCard/ComicDetailsCard';
+import { ComicDetailsCard, FetchError, Loader } from 'components';
 import { useFetchComicById } from 'core/hooks/comicsHooks';
 import { useNavigate, useParams } from 'react-router-dom';
-
 export const ComicDetails = () => {
   const { id } = useParams();
 
@@ -16,19 +15,11 @@ export const ComicDetails = () => {
   const { response, isLoading, error } = useFetchComicById(id);
 
   if (isLoading) {
-    return (
-      <div>
-        <Loader />
-      </div>
-    );
+    return <Loader />;
   }
 
   if (error || !response) {
-    return (
-      <div>
-        <FetchError />
-      </div>
-    );
+    return <FetchError />;
   }
 
   const { results } = response.data;
@@ -38,9 +29,9 @@ export const ComicDetails = () => {
   };
 
   return (
-    <div>
+    <main className={styles.detailsMain}>
       <ComicDetailsCard comic={results[0]} />
       <button onClick={handleGoBackClick}>Go back</button>
-    </div>
+    </main>
   );
 };

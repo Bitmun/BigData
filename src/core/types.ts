@@ -14,7 +14,7 @@ export interface Character {
   id: number;
   name: string;
   comics: {
-    items: { name: string }[];
+    items: { name: string; resourceURI: string }[];
   };
   thumbnail: {
     extension: string;

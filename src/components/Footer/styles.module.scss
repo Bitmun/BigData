@@ -1,0 +1,12 @@
+footer {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+  background-color: black;
+
+  .footerNav {
+    display: flex;
+    padding-left: 5%;
+  }
+}

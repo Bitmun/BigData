@@ -1,3 +1,9 @@
+import styles from './styles.module.scss';
+
 export const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer>
+      <nav className={styles.footerNav}>Made by me</nav>
+    </footer>
+  );
 };

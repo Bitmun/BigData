@@ -1,7 +1,6 @@
 import { createElement } from 'react';
 
-import { ComicDetails, Home } from 'pages';
-import { Characters } from 'pages/Characters/Characters';
+import { Characters, ComicDetails, Home, NotFound } from 'pages';
 
 export const ROUTES = [
   {
@@ -15,5 +14,9 @@ export const ROUTES = [
   {
     path: '/characters',
     element: createElement(Characters),
+  },
+  {
+    path: '*',
+    element: createElement(NotFound),
   },
 ];
