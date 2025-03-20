@@ -4,6 +4,7 @@ body {
 
 :root {
   --primary-color: #007bff;
+  --primary-color-dark: #004ea1;
   --secondary-color: #f17900;
   --subTextSecondary-color: #e0a449;
   --mainBackGround-color: #fafafa;
