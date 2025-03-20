@@ -1,10 +1,20 @@
+import styles from './styles.module.scss';
 import { CharacterTileProps } from './type';
 
-export const CharacterTile = ({ character }: CharacterTileProps) => {
+import { CustomImg } from 'components/CustomImg/CustomImg';
+
+export const CharacterTile = ({
+  character,
+  handleClick,
+  isSelected = false,
+}: CharacterTileProps) => {
+  const { name, thumbnail } = character;
+  const imgSrc = `${thumbnail.path}.${thumbnail.extension}`;
+  const buttonClass = `${styles.charTileWrapper} ${isSelected ? styles.isSelected : ''}`;
   return (
-    <div>
-      <h3>{character.name}</h3>
-      <p>{character.id}</p>
-    </div>
+    <button className={buttonClass} onClick={() => handleClick(character)}>
+      <CustomImg title={name} imgSrc={imgSrc} />
+      <h3>{name}</h3>
+    </button>
   );
 };

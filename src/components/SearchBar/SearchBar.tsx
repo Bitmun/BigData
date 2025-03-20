@@ -1,6 +1,7 @@
+import styles from './styles.module.scss';
+
 import { useSearchContext } from 'core/hooks/useSearch';
 import { debounce, sanitizeInput } from 'core/utils/search/searchUtils';
-
 export const SearchBar = () => {
   const { setQuery } = useSearchContext();
 
@@ -13,12 +14,14 @@ export const SearchBar = () => {
   }, 700);
 
   return (
-    <div>
+    <div className={styles.inputWrapper}>
       <input
+        className={styles.searchInput}
         onChange={(e) => {
           const sanitizedValue = sanitizeInput(e.target.value);
           handleSearchChange(sanitizedValue);
         }}
+        placeholder="Search character..."
       />
     </div>
   );

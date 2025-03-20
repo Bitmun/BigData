@@ -16,4 +16,8 @@ export interface Character {
   comics: {
     items: { name: string }[];
   };
+  thumbnail: {
+    extension: string;
+    path: string;
+  };
 }
