@@ -6,6 +6,8 @@ export interface Comic {
   id: number;
   title: string;
   pageCount: string;
+  prices: { price: number }[];
+  images: { path: string; extension: string }[];
 }
 
 export interface Character {

@@ -1,9 +1,11 @@
+import styles from './styles.module.scss';
+
 import { ComicsList } from 'components';
 
 export const Home = () => {
   return (
-    <div>
+    <main className={styles.mainPart}>
       <ComicsList />
-    </div>
+    </main>
   );
 };
