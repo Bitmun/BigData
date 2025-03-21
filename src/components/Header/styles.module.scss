@@ -3,10 +3,10 @@ header {
   padding: 1rem;
   font-size: 2rem;
   border-bottom: 1px solid var(--subTextSecondary-color);
-  background-color: #000;
+  background-color: var(--mainBlack);
 
   a {
-    color: white;
+    color:  var(--mainWhite);
     text-decoration: none;
 
     &:hover {

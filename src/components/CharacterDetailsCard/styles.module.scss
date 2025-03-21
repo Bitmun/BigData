@@ -32,7 +32,7 @@
     border-radius: 5px;
 
     &:hover {
-      color: white;
+      color: var(--mainWhite);
       background-color: var(--primary-color-dark);
     }
   }
@@ -40,6 +40,6 @@
   @media (max-width: 680px) {
     position: static;
     top: 0;
-    width:auto;
+    width: auto;
   } 
 }

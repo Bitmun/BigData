@@ -2,8 +2,8 @@ footer {
   display: flex;
   align-items: center;
   padding: 1rem;
-  color: white;
-  background-color: black;
+  color: var(--mainWhite);
+  background-color: var(--mainBlack);
   font-size: 2rem;
 
   .footerNav {
