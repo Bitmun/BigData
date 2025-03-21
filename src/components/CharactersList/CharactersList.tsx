@@ -3,13 +3,14 @@ import { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 
 import { CharacterDetailsCard, CharacterTile } from 'components';
-import { FetchError } from 'components';
-import { Loader } from 'components';
+import { FetchError, Loader } from 'components';
 import { useFetchCharacters } from 'core/hooks/charactersHooks';
-import { useSearchContext } from 'core/hooks/useSearch';
+import { RootState } from 'core/store/store';
 import { Character } from 'core/types';
+import { useSelector } from 'react-redux';
+
 export const CharactersList = () => {
-  const { query } = useSearchContext();
+  const query = useSelector((state: RootState) => state.search.query);
   const [selectedChar, setSelectedChar] = useState<Character | null>(null);
   const { response, isLoading, error } = useFetchCharacters(query);
 

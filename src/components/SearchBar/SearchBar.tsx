@@ -1,15 +1,17 @@
 import styles from './styles.module.scss';
 
-import { useSearchContext } from 'core/hooks/useSearch';
+import { setQuery } from 'core/store/features/searchSlice';
 import { debounce, sanitizeInput } from 'core/utils/search/searchUtils';
+import { useDispatch } from 'react-redux';
+
 export const SearchBar = () => {
-  const { setQuery } = useSearchContext();
+  const dispatch = useDispatch();
 
   const handleSearchChange = debounce((input: string) => {
     if (input.length === 0) {
-      setQuery('');
+      dispatch(setQuery(''));
     } else {
-      setQuery(input.trim());
+      dispatch(setQuery(input.trim()));
     }
   }, 700);
 
