@@ -5,7 +5,7 @@ export interface APIResponce<T> {
 export interface Comic {
   id: number;
   title: string;
-  pageCount: string;
+  pageCount: number;
   prices: { price: number }[];
   images: { path: string; extension: string }[];
 }

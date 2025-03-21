@@ -1,5 +1,11 @@
+@font-face {
+  font-family: LexendDeca;
+  src: url(./assets/fonts/LexendDeca-Regular.ttf);
+}
+
 body {
-  margin: 0
+  margin: 0;
+  font-family: LexendDeca;
 }
 
 #root {

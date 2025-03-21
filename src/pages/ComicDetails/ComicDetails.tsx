@@ -3,6 +3,7 @@ import styles from './styles.module.scss';
 import { ComicDetailsCard, FetchError, Loader } from 'components';
 import { useFetchComicById } from 'core/hooks/comicsHooks';
 import { useNavigate, useParams } from 'react-router-dom';
+
 export const ComicDetails = () => {
   const { id } = useParams();
 
@@ -31,7 +32,9 @@ export const ComicDetails = () => {
   return (
     <main className={styles.detailsMain}>
       <ComicDetailsCard comic={results[0]} />
-      <button onClick={handleGoBackClick}>Go back</button>
+      <button className={styles.goBackButton} onClick={handleGoBackClick}>
+        Go back
+      </button>
     </main>
   );
 };
