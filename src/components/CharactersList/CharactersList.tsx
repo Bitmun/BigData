@@ -18,19 +18,11 @@ export const CharactersList = () => {
   }, [query]);
 
   if (isLoading) {
-    return (
-      <div>
-        <Loader />
-      </div>
-    );
+    return <Loader />;
   }
 
   if (error || !response) {
-    return (
-      <div>
-        <FetchError />
-      </div>
-    );
+    return <FetchError />;
   }
 
   const { results } = response.data;

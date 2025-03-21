@@ -1,5 +1,8 @@
 import styles from './styles.module.scss';
+import { FetchErrorProps } from './type';
 
-export const FetchError = () => {
-  return <div className={styles.fetchErrorWrapper}>Fetching error. Try again later</div>;
+import { DEFAULT_FETCH_ERROR } from 'constants/texts';
+
+export const FetchError = ({ errorText = DEFAULT_FETCH_ERROR }: FetchErrorProps) => {
+  return <div className={styles.fetchErrorWrapper}>{errorText}</div>;
 };

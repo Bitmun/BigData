@@ -1,6 +1,7 @@
 import styles from './styles.module.scss';
 
 import { ComicDetailsCard, FetchError, Loader } from 'components';
+import { COMIC_DETAILS_FETCH_ERROR } from 'constants/texts';
 import { useFetchComicById } from 'core/hooks/comicsHooks';
 import { useNavigate, useParams } from 'react-router-dom';
 
@@ -20,7 +21,7 @@ export const ComicDetails = () => {
   }
 
   if (error || !response) {
-    return <FetchError />;
+    return <FetchError errorText={COMIC_DETAILS_FETCH_ERROR} />;
   }
 
   const { results } = response.data;
