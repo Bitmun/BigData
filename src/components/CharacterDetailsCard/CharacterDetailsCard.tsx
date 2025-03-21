@@ -4,12 +4,13 @@ import { CharacterDetailsCardProps } from './type';
 import { CustomImg } from 'components';
 import { useNavigate } from 'react-router-dom';
 
-export const CharacterDetailsCard = ({ char }: CharacterDetailsCardProps) => {
+export const CharacterDetailsCard = ({
+  char,
+  handleClose,
+}: CharacterDetailsCardProps) => {
   const navigate = useNavigate();
   const { thumbnail, name, comics } = char;
   const imgSrc = `${thumbnail.path}.${thumbnail.extension}`;
-
-  console.log(char);
 
   const handleGoToComic = (url: string) => {
     const segments = url.split('/');
@@ -19,6 +20,9 @@ export const CharacterDetailsCard = ({ char }: CharacterDetailsCardProps) => {
 
   return (
     <div className={styles.charDetailWrapper}>
+      <button className={styles.closeDetailsButton} onClick={handleClose}>
+        X
+      </button>
       <CustomImg imgSrc={imgSrc} title={name} />
       <h2>{name}</h2>
       <div>

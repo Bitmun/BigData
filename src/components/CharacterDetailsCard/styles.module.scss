@@ -1,17 +1,19 @@
 .charDetailWrapper {
-  position: static;
+  position: sticky;
+  top: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  max-height: 80vh;
-  border: 3px solid var(--secondary-color);
   padding: 1rem;
+  max-height: 80vh;
+  border-radius: 10px;
+  border: 3px solid var(--secondary-color);
 
   img {
     width: 100%;
-    height: 100%;
+    max-height: 50vh;
     object-fit: contain;
   }
 
@@ -21,4 +23,23 @@
     border: none;
     text-decoration: underline;
   }
+
+  .closeDetailsButton {
+    padding: 1rem;
+    cursor: pointer;
+    background: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+
+    &:hover {
+      color: white;
+      background-color: var(--primary-color-dark);
+    }
+  }
+
+  @media (max-width: 680px) {
+    position: static;
+    top: 0;
+    width:auto;
+  } 
 }

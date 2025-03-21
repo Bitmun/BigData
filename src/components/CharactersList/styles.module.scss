@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   width: 80%;
+  padding: 1rem;
   gap: 1rem;
 
   @media (max-width: 1300px) {
@@ -28,5 +29,12 @@
       grid-template-columns: 1fr;
     } 
   }
+
+  @media (max-width: 680px) {
+    grid-template-columns: 1fr;
+    .selectedCharsList {
+      order: 2
+    }
+  } 
 
 }

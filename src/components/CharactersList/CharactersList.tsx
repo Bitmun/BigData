@@ -37,6 +37,17 @@ export const CharactersList = () => {
 
   const handleSelectChar = (char: Character) => {
     setSelectedChar(char);
+
+    if (window.innerWidth < 680) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const handleClose = () => {
+    setSelectedChar(null);
   };
 
   return (
@@ -54,7 +65,7 @@ export const CharactersList = () => {
               />
             ))}
           </div>
-          <CharacterDetailsCard char={selectedChar} />
+          <CharacterDetailsCard char={selectedChar} handleClose={handleClose} />
         </div>
       )}
       {!selectedChar && (
